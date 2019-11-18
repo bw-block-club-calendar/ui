@@ -8,19 +8,38 @@
     <link rel="icon" href="./images/image.png">
 
     <link rel="stylesheet" href="css/index.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+        $(window).scroll(function(){
+                if($(this).scrollTop() > 0){
+                    $(".navbar").css({"opacity" : "0.6"})
+                    $(".navbar").css({"background" : "#e88282"})
+                }
+                else {
+                    $(".navbar").css({"opacity" : "1"})
+                    $(".navbar").css({"background" : "#e88282"})
+            }
+            })
+         })
+  </script>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="nav-left">
-            <img src="./images/image.png" alt="Logo of a Calender">
-            <input class="nav-search-bar" type="text" placeholder="Search...">
-            </div>
-            <div class="nav-right">
-                <a href="Sign Up">Sign Up</a>
-                <a href="Login">Login</a>
-                <a href="Guest">Guest</a>
-            </div>
+            <div class="navbar">
+
+                <nav>
+                    <div class="nav-left">
+                        <img src="./images/image.png" alt="Logo of a Calender">
+                        <input class="nav-search-bar" type="text" placeholder="Search...">
+                    </div>
+                    <div class="nav-right">
+                        <a href="Sign Up">Sign Up</a>
+                        <a href="Login">Login</a>
+                        <a href="Guest">Guest</a>
+                    </div>
+                </div>
         </nav>
     </header>
             <div class="landing-img">

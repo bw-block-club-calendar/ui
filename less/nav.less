@@ -6,6 +6,7 @@ nav{
     overflow: hidden;
     top: 0;
     z-index: 3;
+    .bootup();
 
     .nav-right{
         .navdivs();
@@ -16,7 +17,9 @@ nav{
             margin: 1%;
             text-decoration: none;
             .font-styles(20px, @mint);
-            
+        }
+        a:hover{
+            color:@light-mint
         }
     }   
     .nav-left{
@@ -38,12 +41,18 @@ nav{
             margin-right: 16px;
             font-size: 17px;
             background: @mauve;
-            color: @mint;
+            color: @light-mint;
         }
 
         .nav-search-bar::placeholder{
             color:@mint
             
+        }
+        input:hover::-webkit-input-placeholder{
+            color: @light-mint;
+        }
+        input:focus::-webkit-input-placeholder{
+            color: @light-mint;
         }
     }
 }
