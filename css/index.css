@@ -131,6 +131,7 @@ nav {
   align-items: center;
   overflow: hidden;
   top: 0;
+  z-index: 3;
 }
 nav .nav-right {
   width: 40%;
@@ -177,6 +178,15 @@ body {
 .landing-img {
   margin-top: 6%;
 }
+.landing-img h1 {
+  position: absolute;
+  top: 10%;
+  right: 2%;
+  z-index: 1;
+  font-weight: bold;
+  font-size: 42px;
+  color: #B99095;
+}
 .landing-img img {
   width: 100%;
 }
@@ -186,4 +196,24 @@ main {
   margin-right: 8%;
   background-image: linear-gradient(#e88282, #ffb3b1);
   height: 1000px;
+}
+main .top-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 70%;
+}
+main .top-container .info-card {
+  padding: 5%;
+  margin: 4%;
+  width: 90%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #ffb3b1;
+  font-size: 36px;
+  color: black;
 }

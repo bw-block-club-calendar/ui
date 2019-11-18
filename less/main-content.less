@@ -2,11 +2,21 @@
 body{
     background: @dark-mint;
 }
+
 .landing-img{
     margin-top: 6%;
+    h1{
+        position: absolute;
+        top: 10%;
+        right: 2%;
+        z-index: 1;
+        .h-styles(42px);
+        .font-styles(42px, @mauve);
+    }
     img{
         width: 100%;
     }
+
 }
 main{
     margin-top: 4%;
@@ -14,4 +24,20 @@ main{
     margin-right:8%;
     background-image:linear-gradient(#e88282, #ffb3b1) ;
    height: 1000px;
+
+   .top-container{
+    .flex-styles();
+    flex-direction: column;
+       height: 70%;
+       .info-card{
+           padding: 5%;
+           margin: 4%;
+           width: 90%;
+           height: 40%;
+           .flex-styles();
+           flex-wrap: wrap;
+           background: @light-salmon;
+           .font-styles(@p-size, black)
+        }
+    }
 }
