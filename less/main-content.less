@@ -1,6 +1,7 @@
 
 body{
     background: @dark-mint;
+    .colorfade(32s,infinite)
 }
 
 .landing-img{
@@ -42,5 +43,9 @@ main{
            background: @light-salmon;
            .font-styles(@p-size, black)
         }
+    }
+    @media @newNav {
+    margin: 0%;
+    width: 100%;
     }
 }

@@ -170,6 +170,7 @@ nav {
   z-index: 3;
   -webkit-animation: scale-in-ver-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: scale-in-ver-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  height: 10%;
 }
 nav .nav-right {
   width: 40%;
@@ -182,7 +183,7 @@ nav .nav-right a {
   padding: 14px 16px;
   margin: 1%;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1.5em;
   color: #B5E5CF;
 }
 nav .nav-right a:hover {
@@ -219,8 +220,39 @@ nav .nav-left input:hover::-webkit-input-placeholder {
 nav .nav-left input:focus::-webkit-input-placeholder {
   color: #e8ffff;
 }
+@media (max-width: 1070px) {
+  nav .nav-right {
+    margin-left: 0%;
+    width: 100%;
+  }
+  nav .nav-right a {
+    height: 100%;
+  }
+  nav .nav-left {
+    width: 100%;
+  }
+}
+@media (max-width: 865px) {
+  nav .nav-right a:nth-child(4) {
+    display: none;
+  }
+}
 body {
   background: #85b39e;
+  animation-name: animate;
+  animation-duration: 32s;
+  animation-iteration-count: infinite;
+}
+@keyframes animate {
+  0% {
+    background-color: #85b39e;
+  }
+  50% {
+    background-color: #e8ffff;
+  }
+  100% {
+    background-color: #85b39e;
+  }
 }
 .landing-img {
   margin-top: 6%;
@@ -266,4 +298,10 @@ main .top-container .info-card {
   background: #ffb3b1;
   font-size: 36px;
   color: black;
+}
+@media (max-width: 865px) {
+  main {
+    margin: 0%;
+    width: 100%;
+  }
 }

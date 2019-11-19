@@ -41,3 +41,18 @@
                 transform:scaleY(1);
     -webkit-transform-origin:0 100%;
     transform-origin:0 100%;opacity:1}}
+
+
+   
+
+.colorfade(@time,@ending){
+        animation-name: animate;
+        animation-duration:@time;
+        animation-iteration-count:@ending;
+
+    @keyframes animate {
+        0% {background-color:@dark-mint ;}
+        50%  {background-color: @light-mint;}
+        100% {background-color:@dark-mint ;}
+    }
+}

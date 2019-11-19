@@ -7,6 +7,7 @@ nav{
     top: 0;
     z-index: 3;
     .bootup();
+    height: 10%;
 
     .nav-right{
         .navdivs();
@@ -16,7 +17,7 @@ nav{
             padding: 14px 16px;
             margin: 1%;
             text-decoration: none;
-            .font-styles(20px, @mint);
+            .font-styles(1.5em, @mint);
         }
         a:hover{
             color:@light-mint
@@ -53,6 +54,27 @@ nav{
         }
         input:focus::-webkit-input-placeholder{
             color: @light-mint;
+        }
+    }
+
+    @media @tablet{
+        .nav-right{
+            margin-left: 0%;
+            width: 100%;
+            a{
+                height: 100%;
+            }
+        }
+        .nav-left{
+            width: 100%;
+        }
+    }
+
+    @media @newNav{
+        .nav-right{
+            a:nth-child(4){
+                display: none;
+            }
         }
     }
 }
