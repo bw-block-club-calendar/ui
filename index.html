@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Block Club Calender</title>
     <link rel="icon" href="./images/image.png">
-
     <link rel="stylesheet" href="css/index.css">
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
@@ -24,6 +23,9 @@
             })
          })
   </script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+  
 </head>
 <body>
     <header>
@@ -31,14 +33,16 @@
 
                 <nav>
                     <div class="nav-left">
-                        <img src="./images/image.png" alt="Logo of a Calender">
+                        <a href="./index.html">
+                            <img src="./images/image.png" alt="Logo of a Calender">
+                        </a>
                         <input class="nav-search-bar" type="text" placeholder="Search...">
                     </div>
                     <div class="nav-right">
                         <a href="Sign Up">Sign Up</a>
                         <a href="Login">Login</a>
                         <a class="guest" href="Guest">Guest</a>
-                        <a class="about" href="About">About</a>
+                        <a class="about" href="./about/about.html">About</a>
                     </div>
                 </div>
         </nav>
@@ -50,14 +54,23 @@
     <main>
         <section class="top-container">
             <div class="info-card">
-                <p>BlockClub Calendar is an easy to use app that lets community members or organizations post information for upcoming neighborhood events. </p>
+                <p>Welcome to your new</p>
+                <br>
+                <p>community center.</p>
+                <button>Register Now!</button>
             </div>
             <div class="info-card">
-                <p>another info-card</p>
+                <p>Find community events near you</p>
+                <input class="search-bar" type="text" placeholder="Search...">
             </div>
             <div class="info-card">
-                <p>the last info info-card</p>
+                <p>Or try hosting one</p>
+                <div class="three-d">
+                    <a id="cool" class="cool-button" data-title="Sign In"></a>
+                </div>
+                <script src="button.js"></script>
             </div>
+            
         </section>
         <section class="mid-container">
             

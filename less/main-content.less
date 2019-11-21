@@ -1,7 +1,8 @@
 
 body{
     background: @dark-mint;
-    .colorfade(32s,infinite)
+    .colorfade(32s,infinite);
+    
 }
 
 .landing-img{
@@ -13,6 +14,16 @@ body{
         z-index: 1;
         .h-styles(42px);
         .font-styles(42px, @dark-mint);
+
+        @media @phone{
+            left: 50%;
+            margin-left: -250px;
+            top: 25%;
+            margin-top: -21px;
+        }
+        @media @smallphone{
+            display: none;
+        }
     }
     h1:hover{
         color: @mint;
@@ -27,25 +38,133 @@ main{
     margin-left:8%;
     margin-right:8%;
     background-image:linear-gradient(#e88282, #ffb3b1) ;
-   height: 1000px;
-
+    height: 100%;
+    .shadows();
    .top-container{
     .flex-styles();
+    .shadows();
     flex-direction: column;
+    
        height: 70%;
        .info-card{
            padding: 5%;
            margin: 4%;
-           width: 90%;
-           height: 40%;
+           width: 300px;
+           height: 400px;
            .flex-styles();
            flex-wrap: wrap;
            background: @light-salmon;
-           .font-styles(@p-size, black)
+           .font-styles(@p-size, black);
+            .shadows();
+            
+
+           @media @phone{
+               width:80%;
+           }
+           #cool{
+            
+            position: relative;
+            display: inline-block;
+            padding: 1.2em 2em;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
+            color: black;
+            z-index: 10;      
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background: linear-gradient(135deg, @mint, @mauve);
+                border-radius: 4px;
+                transition: box-shadow .5s ease, transform .2s ease; 
+                will-change: transform;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+                transform:
+                    translateY(var(--ty, 0))
+                    rotateX(var(--rx, 0))
+                    rotateY(var(--ry, 0))
+                    translateZ(var(--tz, -12px));
+            }
+            
+            &:hover::before {
+                box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+            }
+            
+            &::after {
+                position: relative;
+                display: inline-block;
+                content: attr(data-title);
+                transition: transform .2s ease; 
+                font-weight: bold;
+                letter-spacing: .01em;
+                will-change: transform;
+                transform:
+                    translateY(var(--ty, 0))
+                    rotateX(var(--rx, 0))
+                    rotateY(var(--ry, 0));
+            }
+        
+           }
         }
+        .info-card:nth-child(1){
+                flex-direction: column;
+                align-items: center;
+                align-content: center;
+                justify-content: center;
+                flex-wrap: nowrap;
+                button{
+                    margin-top: 25%;
+                    background: linear-gradient(135deg, @mint, @mauve);
+                    border:1px solid @mauve;
+                    border-radius: 10px;
+                    height: 122px;
+                    width: 255px;
+                    .font();
+                    font-size:32px;
+                }
+        }
+        .info-card:nth-child(3){
+           .three-d{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform-style:preserve-3d ;
+            transform: perspective(800px);
+           }
+         }
     }
-    @media @newNav {
+    @media @phone {
     margin: 0%;
     width: 100%;
+    }
+    
+}
+
+.search-bar{
+
+        float: right;
+        padding: 6px;
+        border: none;
+        margin-top: 8px;
+        margin-right: 16px;
+        font-size: 17px;
+        background: @mauve;
+        color: @light-mint;
+        box-shadow:3px 3px 8px black;
+        border-radius: 25px;
+    &::placeholder{
+        color:@mint
+        
+    }
+    input:hover::-webkit-input-placeholder{
+        color: @light-mint;
+    }
+    input:focus::-webkit-input-placeholder{
+        color: @light-mint;
     }
 }

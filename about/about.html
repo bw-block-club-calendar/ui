@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+        $(window).scroll(function(){
+                if($(this).scrollTop() > 0){
+                    $(".navbar").css({"opacity" : "0.6"})
+                    $(".navbar").css({"background" : "#e88282"})
+                }
+                else {
+                    $(".navbar").css({"opacity" : "1"})
+                    $(".navbar").css({"background" : "#e88282"})
+            }
+            })
+         })
+  </script>
+  <link rel="icon" href="./images/image.png">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <nav>
+                <div class="nav-left">
+                    <a href="../index.html">
+                        <img src="../images/image.png" alt="Logo of a Calender">
+                    </a>
+                    <input class="nav-search-bar" type="text" placeholder="Search...">
+                </div>
+                <div class="nav-right">
+                    <a href="Sign Up">Sign Up</a>
+                    <a href="Login">Login</a>
+                    <a class="guest" href="Guest">Guest</a>
+                    <a class="about" href="./about.html">About</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="about-main">
+        <h2>Meet Our Team</h2>
+            <section class="about-section">
+                <div class="about-card">
+                    <a href="https://github.com/dustinsnoap">
+                        <img src="../images/Dustin.jpg" alt="An image of Dustin">
+                    </a>
+                    <h3>TeamLeader Dustin Snoap</h3>
+                </div>
+                <div class="about-card">
+                    <a href="https://github.com/mdlevick">
+                        <img src="../images//Michael.jpg" alt="An image of Michael">
+                    </a>
+                        <h3>Front End React Engineer Michael Levick, Jr. </h3>
+                </div>
+                <div class="about-card">
+                   <a href="https://github.com/RobertElias">
+                        <img src="../images/Robert Elias.jpg" alt="An image of Michael">
+                    </a> 
+                        <h3>Front End React Engineer Robert Elias </h3>
+                </div>
+                <div class="about-card">
+                    <a href="https://github.com/gelinas">
+                        <img src="../images/Louis.jpg" alt="An image of Louis">
+                    </a>
+                        <h3>Back End Engineer Louis Gelinas </h3>
+                </div>
+                <div class="about-card">
+                    <a href="https://github.com/bfvilchez">
+                        <img src="../images/Brian.jpg" alt="An image of Brian">
+                    </a>
+                        <h3>IOS Engineer Brian Vilchez</h3>
+                </div>
+                <div class="about-card">
+                    <a href="https://github.com/JerryHaaser">
+                        <img src="../images/Jerry.png" alt="An image of Jerry">
+                    </a>
+                        <h3>IOS Engineer Jerry Haasar</h3>
+                </div>
+                <div class="about-card">
+                       <a href="https://github.com/proach123">
+                           <img src="../images/Patrick.jpg" alt="An image of Patrick">
+                       </a>
+                        <h3>User Interface Patrick Roach </h3>
+                </div>
+                
+            </section>
+        </main>
+    
+        <footer>
+            
+        </footer>
+
+</body>
+</html>
